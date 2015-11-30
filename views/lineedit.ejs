@@ -1,0 +1,19 @@
+<% include top %>
+
+<form method='POST' id="lineform" action='/linesave'>
+<input type='hidden' name='docreate'
+    value='<%=docreate ? "create" : "update"%>'>
+<input type='hidden' name='id'
+    value='<%=line ? line.Id : "0"%>'>    
+<p><label>Line: <input type='text' name='line'
+    value='<%= line ? line.Line : "" %>' required></label></p>
+<p><label>Description: <input type='text' name='description'
+    value='<%= line ? line.Description : "" %>' required></label></p>    
+
+<br/><input type='submit' value='Submit' ><a href="../lines">Cancel</a>
+<% include messages %>
+</form>
+<script>
+$("lineform").validate();
+</script>
+<% include bottom %>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+<title>Raspberry Pi emulation</title>
+</head>
+<body>
+<h2>
+This is the homepage of the client. The buttons below are used to replicate Raspberry Pi monitored events</h2>
+
+<div> <button onclick="andon(1,'Trigger')">Andon1 Error Click</button><button onclick="andon(2,'Trigger')">Andon2 Error Click</button><button onclick="andon(3,'Trigger')">Andon3 Error Click</button> </div>
+<div> <button onclick="andon(1,'Clear')">Andon1 Clear Click</button><button onclick="andon(2,'Clear')">Andon2 Clear Click</button><button onclick="andon(3,'Clear')">Andon3 Clear Click</button> </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io.connect("192.168.1.11:3000"); /* The IP address of the Node server */
+
+	/* Socket connect loop */
+	socket.on("connect", function () {
+		console.log("Connected!");
+});
+	/* Socket error */
+	socket.on("error", function() {
+	console.log("Server not available");
+	});
+
+	function andon(andon,type) {
+	if (type=='Trigger') {
+		socket.emit('AndonTrigger',andon);
+	};
+	if (type=='Clear') {
+		socket.emit('AndonClear',andon);
+	};
+	};
+</script>
+</html>

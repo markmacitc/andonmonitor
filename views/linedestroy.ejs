@@ -1,0 +1,9 @@
+<% include top %>
+<form method='POST' action='/linedodestroy'>
+<input type='hidden' name='id'
+       value='<%= line ? line.Id : "" %>'>
+<p>Delete <%= line.Line %> ?</p>
+<br/><input type='submit' value='DELETE' />
+     <a href="/lineview?id=<%= line.Id %>">Cancel</a>
+</form>
+<% include bottom %>

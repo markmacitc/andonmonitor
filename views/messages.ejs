@@ -1,0 +1,9 @@
+<% if (flash) { %>
+    
+    <ul>
+     <%for (var i = 0; i < flash.length; i++) { %>
+        <li> <%= flash[i].msg %></li>
+        <% } %>
+    </ul>    
+    <% } 
+    %>

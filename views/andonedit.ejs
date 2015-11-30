@@ -1,0 +1,31 @@
+<% include top %>
+<form method='POST' action='/andonsave'>
+<input type='hidden' name='docreate'
+    value='<%=docreate ? "create" : "update"%>'>
+<input type='hidden' name='id'
+    value='<%=andon ? andon.id : "0"%>'>    
+<p><label>Product Line:<select id="ProductLineID" name="lineid">
+    <option value="">--select a product line--</option>
+    <% linelist.forEach(function(line) { %>
+      <option value="<%= line.id %>"<%= andon && (andon.lineid == line.id) ? 'selected = "selected"' : '' %>><%= line.line %></option>
+    <% }); %>
+</select></label></p>    
+<p><label>Andon number: <input type='text' name='number'
+    value='<%= andon ? andon.number : "" %>' /></label></p>  
+    
+<p><label>Line takt rate: <input type='text' name='linetaktrate'
+    value='<%= andon ? andon.linetaktrate : "" %>' /></label></p>    
+<p><label>Andon takt rate: <input type='text' name='andontaktrate'
+    value='<%= andon ? andon.andontaktrate : "" %>' /></label></p>    
+<p><label>Count start: <input type='text' name='countstart'
+    value='<%= andon ? andon.countstart : "" %>' /></label></p>   
+<p><label>Type:<select id="AndonType" name="type">       
+    <option value="Human"<%= andon && (andon.type == "Human") ? 'selected = "selected"' : '' %>>Human</option>
+    <option value="Machine"<%= andon && (andon.type == "Machine") ? 'selected = "selected"' : '' %>>Machine</option>
+    
+</select><label></p>      
+
+
+<br/><input type='submit' value='Submit' /><a href="../andons">Cancel</a>
+</form>
+<% include bottom %>

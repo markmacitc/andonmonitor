@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+  text-decoration: underline;
+}
+body {
+margin:20px;
+border:20px;
+}
+form  { display: table;      }
+p     { display: table-row; line-height: 2;  }
+label { display: table-cell; }
+input,select { display: table-cell;float:right;
+    clear:both; }

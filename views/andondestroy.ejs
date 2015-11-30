@@ -1,0 +1,9 @@
+<% include top %>
+<form method='POST' action='/andondodestroy'>
+<input type='hidden' name='id'
+       value='<%= andon ? andon.id : "" %>'>
+<p>Delete <%= andon.number %> ?</p>
+<br/><input type='submit' value='DELETE' />
+     <a href="/andonview?id=<%= andon.id %>">Cancel</a>
+</form>
+<% include bottom %>

@@ -1,0 +1,15 @@
+<% include top %>
+<h3><%= andon ? andon.number : "" %></h3>
+<p><%= andon ? andon.lineid : "" %></p>
+<p><%= andon ? andon.linetaktrate : "" %></p>
+<p><%= andon ? andon.andontaktrate : "" %></p>
+<p><%= andon ? andon.countstart : "" %></p>
+<p><%= andon ? andon.type : "" %></p>
+
+<% if (notekey) { %>
+    <hr/>
+    <p><a href="/andondestroy?id=<%= notekey %>">Delete</a>
+     | <a href="/andonedit?id=<%= notekey %>">Edit</a>
+     | <a href="/andons">Back</a></p>
+<% } %>
+<% include bottom %>

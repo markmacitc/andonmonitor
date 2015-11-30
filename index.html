@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Access-Control-Allow-Origin" content="*"/>
+<title>Andon Monitoring Screen</title>
+<link rel="stylesheet" href="public/css/jquery-ui.css">
+<link rel="stylesheet" href="public/css/MetroJs.css">
+
+<script src="public/js/jquery-1.10.2.js"></script>
+<script src="public/js/jquery-ui.js"></script>
+<script src="public/js/MetroJs.js"></script>
+<script>
+$(function() {
+$( "#tabs" ).tabs();
+});
+</script>
+</head>
+<body>
+<div id="tabs" height="100%">
+<ul>
+<li><a href="#tabs-1">End of Line Yield</a></li>
+<li><a href="#tabs-2">Andon Status</a></li>
+</ul>
+<div id="tabs-1" height="100%">
+<object type="text/html" data="NOTES DATA" width="100%" height="100%"></object>
+</div>
+<div id="tabs-2" height="100%">
+<div class="tiles tile-group six-wide three-tall" style="">
+    <div id="tile1" class="live-tile green" data-delay="4000" data-initdelay="500" >
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+	<div><a href="#"><img class="full" src="public/images/1.gif" alt="first" /></a></div>
+
+    </div>
+    <div id="tile2" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+        <div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+	<div><a href="#"><img class="full" src="public/images/2.gif" alt="first" /></a></div>
+    </div>
+	<div id="tile3" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/3.gif" alt="first" /></a></div>
+    </div>
+    <div id="tile4" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/4.gif" alt="first" /></a></div>
+    </div>
+    <div id="tile5" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/5.gif" alt="first" /></a></div>
+    </div>
+    <div id="tile6" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/6.gif" alt="first" /></a></div>
+    </div>
+    <div id="tile7" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/7.gif" alt="first" /></a></div>
+    </div>
+    <div id="tile8" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="/images/8.gif" alt="first" /></a></div>
+    </div>
+	<div id="tile9" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/9.gif" alt="first" /></a></div>
+    </div>
+    <div id="tile10" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/10.gif" alt="first" /></a></div>
+    </div>
+    <div id="tile11" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/11.gif" alt="first" /></a></div>
+    </div>
+    <div id="tile12" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/12.gif" alt="first" /></a></div>
+    </div>
+    <div id="tile13" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/13.gif" alt="first" /></a></div>
+    </div>
+    <div id="tile14" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/14.gif" alt="first" /></a></div>
+    </div>
+    <div id="tile15" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/15.gif" alt="first" /></a></div>
+    </div>
+	<div id="tile16" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/16.gif" alt="first" /></a></div>
+    </div>
+    <div id="tile17" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/17.gif" alt="first" /></a></div>
+    </div>
+    <div id="tile18" class="live-tile green" data-delay="3500" data-initdelay="500">
+        <!-- adding the 'full' class to an 'img' or 'a' tag causes it to fill the entire tile -->
+	<div><a href="#"><img class="full" src="public/images/happy.gif" alt="first" /></a></div>
+        <div><a href="#"><img class="full" src="public/images/18.gif" alt="first" /></a></div>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+
+  var socket = io.connect("192.168.1.11:3000"); /* The IP address of the Andon server */
+  var tile = [];
+
+  console.log("DEBUG");
+  	tile.push("");
+	tile.push($('#tile1'));
+	tile.push($('#tile2'));
+	tile.push($('#tile3'));
+	tile.push($('#tile4'));
+	tile.push($('#tile5'));
+	tile.push($('#tile6'));
+	tile.push($('#tile7'));
+	tile.push($('#tile8'));
+	tile.push($('#tile9'));
+	tile.push($('#tile10'));
+	tile.push($('#tile11'));
+	tile.push($('#tile12'));
+	tile.push($('#tile13'));
+	tile.push($('#tile14'));
+	tile.push($('#tile15'));
+	tile.push($('#tile16'));
+	tile.push($('#tile17'));
+	tile.push($('#tile18'));
+
+
+
+
+
+	/* Socket connect loop */
+	socket.on("connect", function () {
+		console.log("Connected!");
+	socket.on("SrvAndonTrigger", function(context){
+		triggered(tile[context.number],context.number,context.type);
+		});
+	socket.on("SrvAndonError", function(context){
+		exceededTakt(tile[context.number],context.number,context.type);
+		});
+	socket.on("SrvAndonClear", function(andon){
+		clearedAndon(tile[andon],andon);
+		});
+
+	socket.on("Srvnoandonerrors", function(){
+		$( "#tabs" ).tabs( "option", "active", 0 );
+		});
+
+});
+	/* Socket error */
+	socket.on("error", function() {
+	console.log("Server not available");
+	});
+
+	function triggered(tile,andon,andontype) {
+	$( "#tabs" ).tabs( "option", "active", 1 );
+		tile.empty();
+		if (andontype == 'Human')
+		tile.append("<div><a href='#'><img class='full' src='public/images/"+andon+".gif' alt='first' /></a></div><div><a href='#'><img class='full' src='public/images/neutral.gif' alt='first' /></a></div>")
+		else
+		tile.append("<div><a href='#'><img class='full' src='public/images/"+andon+".gif' alt='first' /></a></div><div><a href='#'><img class='full' src='public/images/yellowcog.gif' alt='first' /></a></div>")
+		tile.liveTile(
+   		 {
+		mode: 'slide',
+		alwaysTrigger : true,
+		frontIsRandom: false,
+		backIsRandom: false});
+		tile.attr("class","live-tile yellow");
+	};
+	function exceededTakt(tile,andon,andontype) {
+		tile.empty();
+		if (andontype == 'Human')
+		tile.append("<div><a href='#'><img class='full' src='public/images/"+andon+".gif' alt='first' /></a></div><div><a href='#'><img class='full' src='public/images/sad.gif' alt='first' /></a></div>")
+		else
+		tile.append("<div><a href='#'><img class='full' src='public/images/"+andon+".gif' alt='first' /></a></div><div><a href='#'><img class='full' src='public/images/redcog.gif' alt='first' /></a></div>");
+		tile.liveTile(
+   		 {
+		mode: 'slide',
+		alwaysTrigger : true,
+		frontIsRandom: false,
+		backIsRandom: false});
+		tile.attr("class","live-tile red");
+
+	};
+	function clearedAndon(tile,andon) {
+		tile.empty();
+		tile.append("<div><a href='#'><img class='full' src='public/images/happy.gif' alt='first' /></a></div><div><a href='#'><img class='full' src='public/images/"+andon+".gif' alt='first' /></a></div>");
+		tile.liveTile(
+   		 {
+		mode: 'none',
+		alwaysTrigger : true,
+		frontIsRandom: false,
+		backIsRandom: false});
+		tile.attr("class","live-tile green");
+	};
+
+
+</script>
+</html>

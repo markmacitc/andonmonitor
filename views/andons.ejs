@@ -1,0 +1,15 @@
+<% include top %>
+<H1><% title %></H1>
+<%
+if (andons) { %>
+    <div class='navbar'>
+    <p><a href='/lines'>Lines</a> |<a href='/andons'>Andons</a> | <a href='/andonadd'>ADD Andon</a></p>
+    </div> 
+  <%andons.forEach(function(andon) {
+     %><p><%= andon.number %>:
+     <a href="/andonview?id=<%= andon.id %>"><%= andon.lineid %>-<%= andon.linetaktrate,andon.anontaktrate,andon.count,andon.type %></a>
+     </p><%
+  });
+}
+%>
+<% include bottom %>

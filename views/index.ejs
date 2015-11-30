@@ -1,0 +1,14 @@
+<% include top %>
+<%
+if (lines) { %>
+   <div class='navbar'>
+    <p><a href='/lines'>Lines</a> |<a href='/andons'>Andons</a> | <a href='/lineadd'>ADD Line</a></p>
+    </div><%
+  lines.forEach(function(line) {
+     %><p><%= line.id %>:
+     <a href="/lineview?id=<%= line.id %>"><%= line.line %>-<%= line.desc %></a>
+     </p><%
+  });
+}
+%>
+<% include bottom %>
