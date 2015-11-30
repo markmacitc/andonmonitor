@@ -1,5 +1,5 @@
 # andonmonitor
-Real time node.js application used to monitor status of anndons on a production line
+Real time node.js application used to monitor status of andons on a production line
 
 The following is taken from the Wikipedia entry
 
