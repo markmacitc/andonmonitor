@@ -1,4 +1,6 @@
 # andonmonitor
+This project is still being developed. The code posted to Github is for reference purposes only. Once the project is fully implemented on my customer site further information will be posted on my website
+
 Real time node.js application used to monitor status of anndons on a production line
 
 The following is taken from the Wikipedia entry
