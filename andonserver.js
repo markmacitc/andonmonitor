@@ -7,8 +7,8 @@ var methodOverride  = require('method-override');
 var validator = require('express-validator');
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
-var nodemailer = require('nodemailer');
-var transporter = nodemailer.createTransport();
+/* var nodemailer = require('nodemailer');
+var transporter = nodemailer.createTransport(); */
 var fork = require('child_process').fork;
 var fs = require('fs');
 var config;
@@ -19,6 +19,8 @@ var taktcount = [];
 var andonlist;
 var andonstate = [];
 var data;
+
+const port=process.env.PORT || 3000
 
 /* Configure the application */
 app.set('views', __dirname + '/views');
@@ -104,7 +106,7 @@ app.post('/andondodestroy', andonrt.dodestroy);
 
 /* Listen on port 3000. By not specifying an IP address the server will listen on all available. If a specific IP address is required enter it in the following format - server.listen(3000, "X.X.X.X"). Replace
 Xs with the required IP address */
-server.listen(3000);
+server.listen(port);
 
 io.on('connect', function(socket) {
   /* Andon triggered event */
@@ -156,7 +158,7 @@ io.on('connect', function(socket) {
 
     /* Send an email detailing the andon activity */
 
-    sendMail(andon, statusmsg);
+    // sendMail(andon, statusmsg);
 
     //reset status
     andonstate[andon] = 'normal';
@@ -180,20 +182,20 @@ function andonerrors(andonstate) {
   return false;
 };
 
-function sendMail(andon, status) {
-  number = parseInt(andon);
-  duration = parseInt(timeon[number][0]) +
-  parseInt(andonlist[number].countstart);
-  /* Subject field is defined by customer requirement */
-  subject = 'Andon' + andon + andonlist[number].Type + statusmsg +
-   andonlist[number].andontaktrate + andonlist[number].linetaktrate + duration;
-  transporter.sendMail({
-    from: 'andonsystem@markmcdonald.co.uk', /* Appropriate from address */
-    to: 'andonmonitoring@markmcdonald.co.uk',			/* Appropriate to address */
-    subject: subject,
-    text: 'appropriate text',
-  });
-};
+// function sendMail(andon, status) {
+//   number = parseInt(andon);
+//   duration = parseInt(timeon[number][0]) +
+//   parseInt(andonlist[number].countstart);
+//   /* Subject field is defined by customer requirement */
+//   subject = 'Andon' + andon + andonlist[number].Type + statusmsg +
+//    andonlist[number].andontaktrate + andonlist[number].linetaktrate + duration;
+//   transporter.sendMail({
+//     from: 'andonsystem@markmcdonald.co.uk', /* Appropriate from address */
+//     to: 'andonmonitoring@markmcdonald.co.uk',			/* Appropriate to address */
+//     subject: subject,
+//     text: 'appropriate text',
+//   });
+// };
 
 function getandons(err, result) {
   /* Callback used to retrieve andons from the database */
