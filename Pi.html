@@ -8,12 +8,13 @@
 <h2>
 This is the homepage of the client. The buttons below are used to replicate Raspberry Pi monitored events</h2>
 
-<div> <button onclick="andon(1,'Trigger')">Andon1 Error Click</button><button onclick="andon(2,'Trigger')">Andon2 Error Click</button><button onclick="andon(3,'Trigger')">Andon3 Error Click</button> </div>
-<div> <button onclick="andon(1,'Clear')">Andon1 Clear Click</button><button onclick="andon(2,'Clear')">Andon2 Clear Click</button><button onclick="andon(3,'Clear')">Andon3 Clear Click</button> </div>
+<div> <button onclick="andon(1,'Trigger')">Andon1 Error Click</button><button onclick="andon(2,'Trigger')">Andon2 Error Click</button><button onclick="andon(3,'Trigger')">Andon3 Error Click</button><button onclick="andon(4,'Trigger')">Andon4 Error Click</button> </div>
+<div> <button onclick="andon(1,'Clear')">Andon1 Clear Click</button><button onclick="andon(2,'Clear')">Andon2 Clear Click</button><button onclick="andon(3,'Clear')">Andon3 Clear Click</button><button onclick="andon(4,'Clear')">Andon4 Clear Click</button> </div>
 </body>
 <script src="/socket.io/socket.io.js"></script>
 <script>
-    var socket = io.connect("192.168.0.11:3000"); /* The IP address of the Node server */
+	/*const port=process.env.PORT || 3000*/
+    var socket = io.connect("https://andonmonitor.azurewebsites.net"); /* The IP address of the Node server */
 
 	/* Socket connect loop */
 	socket.on("connect", function () {
